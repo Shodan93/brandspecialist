@@ -296,12 +296,13 @@ class Component extends DCLogic {
         display: "flex",
         flexDirection: m ? "column" : "row",
         gap: m ? 28 : 24,
-        alignItems: "flex-start",
+        alignItems: m ? "flex-start" : "stretch",
         width: "100%",
       },
       leftColStyle: {
         display: "flex", flexDirection: "column",
-        gap: m ? 24 : 97,
+        gap: 24,
+        justifyContent: m ? "flex-start" : "space-between",
         alignItems: "flex-start",
         width: m ? "100%" : 424,
         flexShrink: 0,
@@ -335,6 +336,7 @@ class Component extends DCLogic {
 
       rightColStyle: {
         display: "flex", flexDirection: "column", gap: 16,
+        justifyContent: m ? "flex-start" : "space-between",
         alignItems: "flex-start", width: "100%", flexGrow: 1,
       },
       videoCardStyle: {
