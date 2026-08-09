@@ -193,7 +193,7 @@ class Component extends DCLogic {
         position: "relative",
       },
       heroCase1BgStyle: m ? { display: "none" } : {
-        position: "absolute", inset: 0,
+        position: "absolute", inset: 0, zIndex: 0,
         backgroundImage: "url(assets/hero-earth.jpg)",
         backgroundPosition: "top center",
         backgroundSize: "cover",
@@ -201,6 +201,7 @@ class Component extends DCLogic {
       },
       heroStyle: {
         position: "relative",
+        zIndex: 1,
         overflow: "hidden",
         backgroundColor: m ? "rgb(250,250,250)" : "transparent",
         height: m ? "auto" : 400,
@@ -264,6 +265,7 @@ class Component extends DCLogic {
 
       case1Style: {
         position: "relative",
+        zIndex: 1,
         backgroundColor: m ? "rgb(250,250,250)" : "transparent",
         display: "flex",
         flexDirection: "column",
@@ -400,6 +402,7 @@ class Component extends DCLogic {
       copyHoverStyle: { opacity: 0.7 },
 
       case2HeaderStyle: {
+        position: "relative", zIndex: 1,
         display: "flex", flexDirection: "column",
         gap: m ? 8 : 16,
         alignItems: "flex-start",
@@ -445,12 +448,13 @@ class Component extends DCLogic {
         alignItems: "flex-start", overflow: "hidden",
       },
       case2BgStyle: m ? { display: "none" } : {
-        position: "absolute", inset: 0,
+        position: "absolute", inset: 0, zIndex: 0,
         backgroundImage: "url(assets/case02-bg.png)", backgroundSize: "cover", backgroundPosition: "center",
       },
-      case2WashStyle: m ? { display: "none" } : { position: "absolute", inset: 0, backgroundColor: "rgba(250,250,250,0.22)" },
+      case2WashStyle: m ? { display: "none" } : { position: "absolute", inset: 0, zIndex: 0, backgroundColor: "rgba(250,250,250,0.22)" },
 
       case2ContentRowStyle: {
+        position: "relative", zIndex: 1,
         display: "flex", flexDirection: m ? "column" : "row",
         gap: m ? 24 : 28, alignItems: m ? "flex-start" : "center", width: "100%",
       },
