@@ -20,60 +20,64 @@
 </helmet>
 <div style="{{ pageStyle }}">
 
-  <div style="{{ heroStyle }}">
-    <div style="{{ heroBgStyle }}"></div>
-    <div style="{{ heroOverlayStyle }}"></div>
-    <sc-if value="{{ notMobile }}">
-      <div style="position:absolute;left:40px;top:54px;width:1px;height:300px;background:rgb(216,221,225)"></div>
-      <div style="position:absolute;left:37.5px;top:52px;width:5px;height:5px;border-radius:50%;background:rgb(90,97,103)"></div>
-    </sc-if>
-    <div style="{{ heroContentStyle }}">
-      <span style="{{ eyebrowStyle }}">SELECTED WORK</span>
-      <h1 style="{{ h1Style }}">Brand is the mission.</h1>
-      <p style="{{ subtitle1Style }}">Svenja Mumelter · Application for Brand Specialist, Isar Aerospace</p>
-      <p style="{{ subtitle2Style }}">A selection of projects across visual communication, content and integrated marketing.</p>
-    </div>
-  </div>
+  <div style="{{ heroCase1WrapStyle }}">
+    <div style="{{ heroCase1BgStyle }}"></div>
 
-  <div style="{{ case1Style }}">
-    <div style="{{ headerStyle }}">
-      <div style="{{ eyebrowRowStyle }}">
-        <span style="{{ eyebrowStyle }}">CASE 01</span>
-        <div style="{{ eyebrowLineStyle }}"></div>
+    <div style="{{ heroStyle }}">
+      <div style="{{ heroBgStyle }}"></div>
+      <div style="{{ heroOverlayStyle }}"></div>
+      <sc-if value="{{ notMobile }}">
+        <div style="position:absolute;left:40px;top:54px;width:1px;height:300px;background:rgb(216,221,225)"></div>
+        <div style="position:absolute;left:37.5px;top:52px;width:5px;height:5px;border-radius:50%;background:rgb(90,97,103)"></div>
+      </sc-if>
+      <div style="{{ heroContentStyle }}">
+        <span style="{{ eyebrowStyle }}">SELECTED WORK</span>
+        <h1 style="{{ h1Style }}">Brand is the mission.</h1>
+        <p style="{{ subtitle1Style }}">Svenja Mumelter · Application for Brand Specialist, Isar Aerospace</p>
+        <p style="{{ subtitle2Style }}">A selection of projects across visual communication, content and integrated marketing.</p>
       </div>
-      <h2 style="{{ caseTitleStyle }}">RoyalShrimp.de</h2>
-      <p style="{{ caseSubtitleStyle }}">Brand Building, Visual Identity, Content &amp; Owned Channels</p>
     </div>
-    <div style="{{ contentRowStyle }}">
-      <div style="{{ leftColStyle }}">
-        <div style="{{ bulletsStyle }}">
-          <div style="{{ bulletRowStyle1 }}"><div style="{{ bulletDotWrap }}"><div style="{{ bulletDot }}"></div></div><span style="{{ bulletTextStyle1 }}">Co founder, jointly built the online shop from scratch starting in May 2020</span></div>
-          <div style="{{ bulletRowStyle1 }}"><div style="{{ bulletDotWrap }}"><div style="{{ bulletDot }}"></div></div><span style="{{ bulletTextStyle1 }}">Operated the shop until the end of 2024</span></div>
-          <div style="{{ bulletRowStyle1 }}"><div style="{{ bulletDotWrap }}"><div style="{{ bulletDot }}"></div></div><span style="{{ bulletTextStyle1 }}">Backend, shop structure, design, product management, website content, photography and video production were handled entirely by the two of us</span></div>
-          <div style="{{ bulletRowStyle1 }}"><div style="{{ bulletDotWrap }}"><div style="{{ bulletDot }}"></div></div><span style="{{ bulletTextStyle1 }}">At the time, without AI. Today, the same work could be done much more efficiently using AI, automation, and tools and data sources connected via MCP</span></div>
+
+    <div style="{{ case1Style }}">
+      <div style="{{ headerStyle }}">
+        <div style="{{ eyebrowRowStyle }}">
+          <span style="{{ eyebrowStyle }}">CASE 01</span>
+          <div style="{{ eyebrowLineStyle }}"></div>
         </div>
-        <div style="{{ qrCardStyle }}">
-          <img src="assets/qr-code.png" alt="QR code linking to RoyalShrimp.de" style="{{ qrImgStyle }}" />
-          <span style="{{ scanLabelStyle }}">SCAN TO OPEN</span>
-        </div>
+        <h2 style="{{ caseTitleStyle }}">RoyalShrimp.de</h2>
+        <p style="{{ caseSubtitleStyle }}">Brand Building, Visual Identity, Content &amp; Owned Channels</p>
       </div>
-      <div style="{{ rightColStyle }}">
-        <div style="{{ videoCardStyle }}" data-name="video-card">
-          <button style-hover="{{ playHoverStyle }}" style="{{ playIconStyle }}" onClick="{{ toggleVideo }}" aria-label="Play shop walkthrough">
-            <svg width="{{ playIconSvgSize }}" height="{{ playIconSvgSize }}" viewBox="0 0 24 24" fill="rgb(47,107,232)"><path d="M8 5v14l11-7z"></path></svg>
-          </button>
-          <span style="{{ videoLabelStyle }}">SHOP WALKTHROUGH</span>
-          <span style="{{ videoSubLabelStyle }}">Click to play — streams from Google Drive.</span>
-          <sc-if value="{{ videoOpen }}">
-            <div style="{{ videoNoticeStyle }}">Video preview — connect your real Google Drive share link here.</div>
-          </sc-if>
+      <div style="{{ contentRowStyle }}">
+        <div style="{{ leftColStyle }}">
+          <div style="{{ bulletsStyle }}">
+            <div style="{{ bulletRowStyle1 }}"><div style="{{ bulletDotWrap }}"><div style="{{ bulletDot }}"></div></div><span style="{{ bulletTextStyle1 }}">Co founder, jointly built the online shop from scratch starting in May 2020</span></div>
+            <div style="{{ bulletRowStyle1 }}"><div style="{{ bulletDotWrap }}"><div style="{{ bulletDot }}"></div></div><span style="{{ bulletTextStyle1 }}">Operated the shop until the end of 2024</span></div>
+            <div style="{{ bulletRowStyle1 }}"><div style="{{ bulletDotWrap }}"><div style="{{ bulletDot }}"></div></div><span style="{{ bulletTextStyle1 }}">Backend, shop structure, design, product management, website content, photography and video production were handled entirely by the two of us</span></div>
+            <div style="{{ bulletRowStyle1 }}"><div style="{{ bulletDotWrap }}"><div style="{{ bulletDot }}"></div></div><span style="{{ bulletTextStyle1 }}">At the time, without AI. Today, the same work could be done much more efficiently using AI, automation, and tools and data sources connected via MCP</span></div>
+          </div>
+          <div style="{{ qrCardStyle }}">
+            <img src="assets/qr-code.png" alt="QR code linking to RoyalShrimp.de" style="{{ qrImgStyle }}" />
+            <span style="{{ scanLabelStyle }}">SCAN TO OPEN</span>
+          </div>
         </div>
-        <div style="{{ buttonRowStyle }}">
-          <div style="{{ externalLinkCardStyle }}">
-            <span style="{{ linkLabelStyle }}">LINK TO OPEN &amp; COPY</span>
-            <div style="{{ urlRowStyle }}">
-              <a href="https://drive.google.com/file/d/1D6PM6L/view?usp=sharing" target="_blank" rel="noopener" style="{{ urlTextStyle }}">drive.google.com/file/d/1D6PM6L…/view?usp=sharing</a>
-              <button style-hover="{{ copyHoverStyle }}" style="{{ copyIconStyle }}" onClick="{{ copyLink1 }}" aria-label="Copy link">{{ copyIcon1 }}</button>
+        <div style="{{ rightColStyle }}">
+          <div style="{{ videoCardStyle }}" data-name="video-card">
+            <button style-hover="{{ playHoverStyle }}" style="{{ playIconStyle }}" onClick="{{ toggleVideo }}" aria-label="Play shop walkthrough">
+              <svg width="{{ playIconSvgSize }}" height="{{ playIconSvgSize }}" viewBox="0 0 24 24" fill="rgb(47,107,232)"><path d="M8 5v14l11-7z"></path></svg>
+            </button>
+            <span style="{{ videoLabelStyle }}">SHOP WALKTHROUGH</span>
+            <span style="{{ videoSubLabelStyle }}">Click to play — streams from Google Drive.</span>
+            <sc-if value="{{ videoOpen }}">
+              <div style="{{ videoNoticeStyle }}">Video preview — connect your real Google Drive share link here.</div>
+            </sc-if>
+          </div>
+          <div style="{{ buttonRowStyle }}">
+            <div style="{{ externalLinkCardStyle }}">
+              <span style="{{ linkLabelStyle }}">LINK TO OPEN &amp; COPY</span>
+              <div style="{{ urlRowStyle }}">
+                <a href="https://drive.google.com/file/d/1D6PM6L/view?usp=sharing" target="_blank" rel="noopener" style="{{ urlTextStyle }}">drive.google.com/file/d/1D6PM6L…/view?usp=sharing</a>
+                <button style-hover="{{ copyHoverStyle }}" style="{{ copyIconStyle }}" onClick="{{ copyLink1 }}" aria-label="Copy link">{{ copyIcon1 }}</button>
+              </div>
             </div>
           </div>
         </div>
@@ -185,22 +189,32 @@ class Component extends DCLogic {
         margin: "0 auto",
       },
 
+      heroCase1WrapStyle: {
+        position: "relative",
+      },
+      heroCase1BgStyle: m ? { display: "none" } : {
+        position: "absolute", inset: 0,
+        backgroundImage: "url(assets/hero-earth.jpg)",
+        backgroundPosition: "top center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      },
       heroStyle: {
         position: "relative",
         overflow: "hidden",
-        backgroundColor: "rgb(250,250,250)",
+        backgroundColor: m ? "rgb(250,250,250)" : "transparent",
         height: m ? "auto" : 400,
         padding: m ? "56px 24px 44px 24px" : "0",
         display: "flex",
         alignItems: m ? "flex-start" : "stretch",
       },
-      heroBgStyle: {
+      heroBgStyle: m ? {
         position: "absolute", inset: 0,
         backgroundImage: "url(assets/hero-earth.jpg)",
-        backgroundPosition: m ? "50% 0%" : "50% 0%",
-        backgroundSize: m ? "100% 238%" : "100% 360%",
+        backgroundPosition: "50% 0%",
+        backgroundSize: "100% 238%",
         backgroundRepeat: "no-repeat",
-      },
+      } : { display: "none" },
       heroOverlayStyle: {
         position: "absolute", inset: 0,
         background: "linear-gradient(180deg, rgba(250,250,250,0.55) 0%, rgba(250,250,250,0.35) 50%, rgba(250,250,250,0.05) 100%)",
@@ -250,7 +264,7 @@ class Component extends DCLogic {
 
       case1Style: {
         position: "relative",
-        backgroundColor: "rgb(250,250,250)",
+        backgroundColor: m ? "rgb(250,250,250)" : "transparent",
         display: "flex",
         flexDirection: "column",
         gap: m ? 28 : 64,
