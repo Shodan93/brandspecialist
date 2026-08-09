@@ -85,24 +85,24 @@
     </div>
   </div>
 
-  <div style="{{ case2Style }}">
+  <div style="{{ case2Style }}" data-section="case2">
     <div style="{{ case2BgStyle }}"></div>
     <div style="{{ case2WashStyle }}"></div>
-    <div style="{{ headerStyle }}">
-      <div style="{{ eyebrowRowStyle }}">
-        <span style="{{ eyebrowStyle }}">CASE 02</span>
-        <div style="{{ eyebrowLineStyle }}"></div>
+    <div style="{{ case2HeaderStyle }}">
+      <div style="{{ case2EyebrowRowStyle }}">
+        <span style="{{ case2EyebrowStyle }}">CASE 02</span>
+        <div style="{{ case2EyebrowLineStyle }}"></div>
       </div>
-      <h2 style="{{ caseTitleStyle }}">Cuply</h2>
-      <p style="{{ caseSubtitleStyle }}">Integrated Marketing Case</p>
+      <h2 style="{{ case2TitleStyle }}">Cuply</h2>
+      <p style="{{ case2SubtitleStyle }}">Integrated Marketing Case</p>
     </div>
     <div style="{{ case2ContentRowStyle }}">
       <img src="assets/cuply-book.jpg" alt="Cuply — fictional marketing case study book cover" style="{{ cuplyImgStyle }}" />
       <div style="{{ case2RightColStyle }}">
         <div style="{{ bulletsStyle2 }}">
-          <div style="{{ bulletRowStyle2 }}"><div style="{{ bulletDotWrap }}"><div style="{{ bulletDot }}"></div></div><span style="{{ bulletTextStyle2 }}">Fictional marketing case study, 105 pages</span></div>
-          <div style="{{ bulletRowStyle2 }}"><div style="{{ bulletDotWrap }}"><div style="{{ bulletDot }}"></div></div><span style="{{ bulletTextStyle2 }}">Strategy, positioning, content, campaigns and execution</span></div>
-          <div style="{{ bulletRowStyle2 }}"><div style="{{ bulletDotWrap }}"><div style="{{ bulletDot }}"></div></div><span style="{{ bulletTextStyle2 }}">Open or download as PDF</span></div>
+          <div style="{{ bulletRowStyle2 }}"><div style="{{ case2BulletDotWrap }}"><div style="{{ case2BulletDot }}"></div></div><span style="{{ bulletTextStyle2 }}">Fictional marketing case study, 105 pages</span></div>
+          <div style="{{ bulletRowStyle2 }}"><div style="{{ case2BulletDotWrap }}"><div style="{{ case2BulletDot }}"></div></div><span style="{{ bulletTextStyle2 }}">Strategy, positioning, content, campaigns and execution</span></div>
+          <div style="{{ bulletRowStyle2 }}"><div style="{{ case2BulletDotWrap }}"><div style="{{ case2BulletDot }}"></div></div><span style="{{ bulletTextStyle2 }}">Open or download as PDF</span></div>
         </div>
         <a href="#" style-hover="{{ primaryBtnHoverStyle }}" style="{{ primaryBtnStyle }}">VIEW FULL CASE STUDY</a>
       </div>
@@ -398,6 +398,43 @@ class Component extends DCLogic {
         border: "none", cursor: "pointer", flexShrink: 0, padding: 4,
       },
       copyHoverStyle: { opacity: 0.7 },
+
+      case2HeaderStyle: {
+        display: "flex", flexDirection: "column",
+        gap: m ? 8 : 16,
+        alignItems: "flex-start",
+        width: "100%",
+      },
+      case2EyebrowRowStyle: {
+        display: "flex", flexDirection: "row", gap: 16, alignItems: "center",
+      },
+      case2EyebrowStyle: {
+        fontFamily: mono, fontWeight: 500,
+        fontSize: m ? 12 : 14,
+        letterSpacing: "0.14em",
+        lineHeight: 1.2,
+        color: accent,
+        whiteSpace: "nowrap",
+        margin: 0,
+      },
+      case2EyebrowLineStyle: { width: 160, height: 1, backgroundColor: border, flexShrink: 0 },
+      case2TitleStyle: {
+        fontFamily: archivoNarrow, fontWeight: 600,
+        fontSize: m ? 28 : 40,
+        letterSpacing: "-0.014em",
+        lineHeight: 1.04,
+        color: strong,
+        margin: 0,
+      },
+      case2SubtitleStyle: {
+        fontFamily: archivo, fontWeight: 400,
+        fontSize: m ? 15 : 19,
+        lineHeight: 1.55,
+        color: muted,
+        margin: 0,
+      },
+      case2BulletDotWrap: { width: 6, padding: "10px 0", flexShrink: 0 },
+      case2BulletDot: { width: 6, height: 6, borderRadius: "50%", backgroundColor: accent },
 
       case2Style: {
         position: "relative",
