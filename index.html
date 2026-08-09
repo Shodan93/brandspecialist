@@ -61,21 +61,18 @@
           </div>
         </div>
         <div style="{{ rightColStyle }}">
-          <div style="{{ videoCardStyle }}" data-name="video-card">
-            <button style-hover="{{ playHoverStyle }}" style="{{ playIconStyle }}" onClick="{{ toggleVideo }}" aria-label="Play shop walkthrough">
+          <a href="https://drive.google.com/file/d/1ZM4CWZ1CJGp5d3qtxk0aSyLfXs3kVGFF/view?usp=sharing" target="_blank" rel="noopener" style="{{ videoCardStyle }}" data-name="video-card">
+            <div style-hover="{{ playHoverStyle }}" style="{{ playIconStyle }}" aria-label="Play shop walkthrough">
               <svg width="{{ playIconSvgSize }}" height="{{ playIconSvgSize }}" viewBox="0 0 24 24" fill="rgb(47,107,232)"><path d="M8 5v14l11-7z"></path></svg>
-            </button>
+            </div>
             <span style="{{ videoLabelStyle }}">SHOP WALKTHROUGH</span>
             <span style="{{ videoSubLabelStyle }}">Click to play — streams from Google Drive.</span>
-            <sc-if value="{{ videoOpen }}">
-              <div style="{{ videoNoticeStyle }}">Video preview — connect your real Google Drive share link here.</div>
-            </sc-if>
-          </div>
+          </a>
           <div style="{{ buttonRowStyle }}">
             <div style="{{ externalLinkCardStyle }}">
               <span style="{{ linkLabelStyle }}">LINK TO OPEN &amp; COPY</span>
               <div style="{{ urlRowStyle }}">
-                <a href="https://drive.google.com/file/d/1D6PM6L/view?usp=sharing" target="_blank" rel="noopener" style="{{ urlTextStyle }}">drive.google.com/file/d/1D6PM6L…/view?usp=sharing</a>
+                <a href="https://drive.google.com/file/d/1ZM4CWZ1CJGp5d3qtxk0aSyLfXs3kVGFF/view?usp=sharing" target="_blank" rel="noopener" style="{{ urlTextStyle }}">drive.google.com/file/d/1ZM4CWZ1CJGp…/view?usp=sharing</a>
                 <button style-hover="{{ copyHoverStyle }}" style="{{ copyIconStyle }}" onClick="{{ copyLink1 }}" aria-label="Copy link">{{ copyIcon1 }}</button>
               </div>
             </div>
@@ -104,7 +101,7 @@
           <div style="{{ bulletRowStyle2 }}"><div style="{{ case2BulletDotWrap }}"><div style="{{ case2BulletDot }}"></div></div><span style="{{ bulletTextStyle2 }}">Strategy, positioning, content, campaigns and execution</span></div>
           <div style="{{ bulletRowStyle2 }}"><div style="{{ case2BulletDotWrap }}"><div style="{{ case2BulletDot }}"></div></div><span style="{{ bulletTextStyle2 }}">Open or download as PDF</span></div>
         </div>
-        <a href="#" style-hover="{{ primaryBtnHoverStyle }}" style="{{ primaryBtnStyle }}">VIEW FULL CASE STUDY</a>
+        <a href="https://drive.google.com/file/d/1D6PM6L-wvPN5Ki1uZ-346SJD_HgwOttX/view?usp=sharing" target="_blank" rel="noopener" style-hover="{{ primaryBtnHoverStyle }}" style="{{ primaryBtnStyle }}">VIEW FULL CASE STUDY</a>
       </div>
     </div>
   </div>
@@ -134,7 +131,6 @@
 class Component extends DCLogic {
   state = {
     isMobile: typeof window !== "undefined" ? window.innerWidth <= 859 : false,
-    videoOpen: false,
     copied1: false,
   };
 
@@ -150,14 +146,12 @@ class Component extends DCLogic {
   }
 
   copyLink1 = () => {
-    const text = "https://drive.google.com/file/d/1D6PM6L/view?usp=sharing";
+    const text = "https://drive.google.com/file/d/1ZM4CWZ1CJGp5d3qtxk0aSyLfXs3kVGFF/view?usp=sharing";
     if (navigator.clipboard) navigator.clipboard.writeText(text).catch(() => {});
     this.setState({ copied1: true });
     clearTimeout(this._t1);
     this._t1 = setTimeout(() => this.setState({ copied1: false }), 1500);
   };
-
-  toggleVideo = () => this.setState(s => ({ videoOpen: !s.videoOpen }));
 
   renderVals() {
     const m = this.state.isMobile;
@@ -172,9 +166,7 @@ class Component extends DCLogic {
 
     return {
       notMobile: !m,
-      videoOpen: this.state.videoOpen,
       copyIcon1: this.state.copied1 ? "✓" : "⧉",
-      toggleVideo: this.toggleVideo,
       copyLink1: this.copyLink1,
 
       pageStyle: {
@@ -260,7 +252,8 @@ class Component extends DCLogic {
         lineHeight: 1.55,
         color: muted,
         margin: 0,
-        maxWidth: m ? "100%" : 620,
+        maxWidth: m ? "100%" : "none",
+        whiteSpace: m ? "normal" : "nowrap",
       },
 
       case1Style: {
@@ -374,11 +367,6 @@ class Component extends DCLogic {
         fontFamily: inter, fontWeight: 400, fontSize: m ? 12 : 14,
         color: muted, textAlign: "center", margin: 0,
       },
-      videoNoticeStyle: {
-        fontFamily: inter, fontSize: 12, color: muted, background: "rgba(250,250,250,0.9)",
-        padding: "6px 12px", borderRadius: 8, marginTop: 4,
-      },
-
       buttonRowStyle: { width: "100%" },
       externalLinkCardStyle: {
         borderRadius: 12,
